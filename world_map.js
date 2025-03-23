@@ -1,369 +1,192 @@
-/*var a = document.getElementById('ch1').value;
-var b = document.getElementById('ch2').value;
-var c = document.getElementById('ch3').value;
-var d = document.getElementById('ch4').value;
-var e = document.getElementById('ch5').value;
-var f = document.getElementById('ch6').value;
-var g = document.getElementById('ch7').value;
-var vid="..."
+window.onload = function() {
+    console.log("La page est entièrement chargée !");
+};
 
-function change(sel){
-    var vid = "..."; // Valeur à utiliser pour vider le champ
-    
-    if (sel === 'ch1') {
-        a.value = vid;
-    } else if (sel === 'ch2') {
-        b.value = vid;
-    } else if (sel === 'ch3') {
-        c.value = vid;
-    } else if (sel === 'ch4') {
-        d.value = vid;
-    } else if (sel === 'ch5') {
-        e.value = vid;
-    } else if (sel === 'ch6') {
-        f.value = vid;
-    } else if (sel === 'ch7') {
-        g.value = vid;
-    }
+let timeout;
+window.onresize = function() {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+        console.log("Fenêtre redimensionnée !");
+    }, 300);
+};
+
+
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.classList.add('dark-mode');
 }
 
-
-
-function dd(){
-alert("fv");
-
-
-}
-
-
-
-var a = document.getElementById('ch1').value;
-var b = document.getElementById('ch2').value;
-var c = document.getElementById('ch3').value;
-var d = document.getElementById('ch4').value;
-var e = document.getElementById('ch5').value;
-var f = document.getElementById('ch6').value;
-var g = document.getElementById('ch7').value;
-var vid="..."
-
-/*function change(sel){
-    var vid = "..."; // Valeur à utiliser pour vider le champ
-    
-    if (sel === 'ch1') {
-        a.value = vid;
-    } else if (sel === 'ch2') {
-        b.value = vid;
-    } else if (sel === 'ch3') {
-        c.value = vid;
-    } else if (sel === 'ch4') {
-        d.value = vid;
-    } else if (sel === 'ch5') {
-        e.value = vid;
-    } else if (sel === 'ch6') {
-        f.value = vid;
-    } else if (sel === 'ch7') {
-        g.value = vid;
-    }
-}
-
-
-
-function dd(){
-alert("vous aller voire la correction");
-var body = document.body;
-
-            // Changer l'image de fond
-            body.style.backgroundImage = "url('world_map_name.png.jpg')";
-
-}
-
-function change(sel){
-    
-var a=document.map.ch1.value;
-var b=document.map.ch2.value;
-var c=document.map.ch3.value;
-var d=document.map.ch4.value;
-var e=document.map.ch5.value;
-var f=document.map.ch6.value;
-var g=document.map.ch7.value;
-
-var 
-je veut changer l option du ancienne quand l'utilisateur choisir la mémé dans une autre select    
-if (sel==a) {
-   azerty.selectedIndex = 1;*/
-
-
-
-   // Sélectionnez tous les éléments avec la classe "chouse"
-var selectElements = document.querySelectorAll('.chouse');
-
-// Parcourez chaque élément et ajoutez un écouteur d'événements change
-selectElements.forEach(function(selectElement) {
-  selectElement.addEventListener('change', function() {
-    var audio = document.getElementById('sound');
-    audio.currentTime = 0; // Réinitialiser la lecture à partir du début pour permettre une lecture répétée
-    audio.play();
-  });
+document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('mouseenter', () => btn.style.transform = 'scale(1.05)');
+    btn.addEventListener('mouseleave', () => btn.style.transform = 'scale(1)');
 });
 
 
 
-function change1(sel) {
-   
-    var b=document.map.ch2.value;
-    var c=document.map.ch3.value;
-    var d=document.map.ch4.value;
-    var e=document.map.ch5.value;
-    var f=document.map.ch6.value;
-    var g=document.map.ch7.value;
+
+
+
+function goBack() {
     
+    // Réinitialiser l'affichage
+    document.querySelectorAll("#wel, #bet, #form, #title").forEach(el => el.style.display = 'block');
+    document.body.style.backgroundImage = "URL(world-map-of-continents-printable-free.webp)"; // Réinitialiser l'image de fond
 
-if (sel==b) { document.getElementById("ch2").selectedIndex = 0;  }
-else {if (sel==c) {document.getElementById("ch3").selectedIndex = 0;}
-else {if (sel==d) {document.getElementById("ch4").selectedIndex = 0;}
-else {if (sel==e) {document.getElementById("ch5").selectedIndex = 0;}
-else {if (sel==f) {document.getElementById("ch6").selectedIndex = 0;}
-else {if (sel==g) {document.getElementById("ch7").selectedIndex = 0;}  }}}}}}
-
-
-
-
-
-
-
-
-
-
-
-function change2(sel) {
-   
-    var a=document.map.ch1.value;
-    var c=document.map.ch3.value;
-    var d=document.map.ch4.value;
-    var e=document.map.ch5.value;
-    var f=document.map.ch6.value;
-    var g=document.map.ch7.value;
-if (sel==a) { document.getElementById("ch1").selectedIndex = 0;  }
-else {if (sel==c) {document.getElementById("ch3").selectedIndex = 0;}
-else {if (sel==d) {document.getElementById("ch4").selectedIndex = 0;}
-else {if (sel==e) {document.getElementById("ch5").selectedIndex = 0;}
-else {if (sel==f) {document.getElementById("ch6").selectedIndex = 0;}
-else {if (sel==g) {document.getElementById("ch7").selectedIndex = 0;}  }}}}}}
-
-
-
-
-
-
-
-function change3(sel) {
-   
-    var b=document.map.ch1.value;
-    var c=document.map.ch2.value;
-    var d=document.map.ch4.value;
-    var e=document.map.ch5.value;
-    var f=document.map.ch6.value;
-    var g=document.map.ch7.value;
-if (sel==b) { document.getElementById("ch1").selectedIndex = 0;  }
-else {if (sel==c) {document.getElementById("ch2").selectedIndex = 0;}
-else {if (sel==d) {document.getElementById("ch4").selectedIndex = 0;}
-else {if (sel==e) {document.getElementById("ch5").selectedIndex = 0;}
-else {if (sel==f) {document.getElementById("ch6").selectedIndex = 0;}
-else {if (sel==g) {document.getElementById("ch7").selectedIndex = 0;}  }}}}}}
-
-
-
-
-
-
-function change4(sel) {
-   
-    var b=document.map.ch1.value;
-    var c=document.map.ch2.value;
-    var d=document.map.ch3.value;
-    var e=document.map.ch5.value;
-    var f=document.map.ch6.value;
-    var g=document.map.ch7.value;
-if (sel==b) { document.getElementById("ch1").selectedIndex = 0;  }
-else {if (sel==c) {document.getElementById("ch2").selectedIndex = 0;}
-else {if (sel==d) {document.getElementById("ch3").selectedIndex = 0;}
-else {if (sel==e) {document.getElementById("ch5").selectedIndex = 0;}
-else {if (sel==f) {document.getElementById("ch6").selectedIndex = 0;}
-else {if (sel==g) {document.getElementById("ch7").selectedIndex = 0;}  }}}}}}
-
-
-
-
-
-
-function change5(sel) {
-   
-    var b=document.map.ch1.value;
-    var c=document.map.ch2.value;
-    var d=document.map.ch3.value;
-    var e=document.map.ch4.value;
-    var f=document.map.ch6.value;
-    var g=document.map.ch7.value;
-if (sel==b) { document.getElementById("ch1").selectedIndex = 0;  }
-else {if (sel==c) {document.getElementById("ch2").selectedIndex = 0;}
-else {if (sel==d) {document.getElementById("ch3").selectedIndex = 0;}
-else {if (sel==e) {document.getElementById("ch4").selectedIndex = 0;}
-else {if (sel==f) {document.getElementById("ch6").selectedIndex = 0;}
-else {if (sel==g) {document.getElementById("ch7").selectedIndex = 0;}  }}}}}}
-
-
-
-
-
-
-
-function change6(sel) {
-   
-    var b=document.map.ch1.value;
-    var c=document.map.ch2.value;
-    var d=document.map.ch3.value;
-    var e=document.map.ch4.value;
-    var f=document.map.ch5.value;
-    var g=document.map.ch7.value;
-if (sel==b) { document.getElementById("ch1").selectedIndex = 0;  }
-else {if (sel==c) {document.getElementById("ch2").selectedIndex = 0;}
-else {if (sel==d) {document.getElementById("ch3").selectedIndex = 0;}
-else {if (sel==e) {document.getElementById("ch4").selectedIndex = 0;}
-else {if (sel==f) {document.getElementById("ch5").selectedIndex = 0;}
-else {if (sel==g) {document.getElementById("ch7").selectedIndex = 0;}  }}}}}}
-
-
-
-
-
-
-
-function change7(sel) {
-   
-    var b=document.map.ch1.value;
-    var c=document.map.ch2.value;
-    var d=document.map.ch3.value;
-    var e=document.map.ch4.value;
-    var f=document.map.ch5.value;
-    var g=document.map.ch6.value;
-if (sel==b) { document.getElementById("ch1").selectedIndex = 0;  }
-else {if (sel==c) {document.getElementById("ch2").selectedIndex = 0;}
-else {if (sel==d) {document.getElementById("ch3").selectedIndex = 0;}
-else {if (sel==e) {document.getElementById("ch4").selectedIndex = 0;}
-else {if (sel==f) {document.getElementById("ch5").selectedIndex = 0;}
-else {if (sel==g) {document.getElementById("ch6").selectedIndex = 0;}  }}}}}}
-
-
-
-
-
-function correction(){
-    alert("vous allez voire la correction");
-    var body = document.body;
-    
-                // Changer l'image de fond
-                body.style.backgroundImage = "url('world_map_name.png.jpg')";
-    
-
-             
-                $("#wel, #bet, #form, #title").hide();     
+    // Masquer le bouton "Retour"
+    const retourButton = document.querySelector('button[type="button"]');
+    if (retourButton) {
+        retourButton.style.display = 'none';
     }
-
-
-
-
-    function teste() {
-
-        var a=document.map.ch1.value;
-        var b=document.map.ch2.value;
-        var c=document.map.ch3.value;
-        var d=document.map.ch4.value;
-        var e=document.map.ch5.value;
-        var f=document.map.ch6.value;
-        var g=document.map.ch7.value;
-        var n=0;
-
-if (a=="North Ameria") {n++;
-    document.getElementById('ch1').style.border= "6px outset lime";
-    document.getElementById('ch1').style.boxShadow = "0px 8px 16px rgb(33, 252, 91)";   }
-     else {
-    document.getElementById('ch1').style.border= "6px outset red";
-    document.getElementById('ch1').style.boxShadow = "0px 8px 16px rgba(255, 8, 8, 0.881)";}
-
     
+    // Réinitialiser tous les champs de sélection à leur état initial
+    const allSelects = document.querySelectorAll('.chouse');
+    allSelects.forEach(select => {
+        select.value = 'nul';  // Réinitialiser les valeurs
+        select.style.boxShadow="0px 4px 6px rgba(128, 128, 128, 0.5)";
+        select.style.border = "5px outset rgb(155, 203, 230)";
+        select.border
+    });
+}
 
-    if (b=="South America") {n++;
-        document.getElementById('ch2').style.border= "6px outset lime";
-        document.getElementById('ch2').style.boxShadow = "0px 8px 16px rgb(33, 252, 91)";}
-         else {
-        document.getElementById('ch2').style.border= "6px outset red";
-        document.getElementById('ch2').style.boxShadow = "0px 8px 16px rgba(255, 8, 8, 0.881)";}
-    
 
+function onAnnu(){
+    const allSelects = document.querySelectorAll('.chouse');
+    allSelects.forEach(select => {
+    select.value = 'nul';  // Réinitialiser les valeurs
+    select.style.boxShadow="0px 4px 6px rgba(128, 128, 128, 0.5)";
+    select.style.border = "5px outset rgb(155, 203, 230)";
+    select.border
+   
     
-        if (c=="Africa") {n++;
-            document.getElementById('ch3').style.border= "6px outset lime";
-            document.getElementById('ch3').style.boxShadow = "0px 8px 16px rgb(33, 252, 91)";}
-             else {
-            document.getElementById('ch3').style.border= "6px outset red";
-            document.getElementById('ch3').style.boxShadow = "0px 8px 16px rgba(255, 8, 8, 0.881)";}
         
-
-            if (d=="Europe") {n++;
-                document.getElementById('ch4').style.border= "6px outset lime";
-                document.getElementById('ch4').style.boxShadow = "0px 8px 16px rgb(33, 252, 91)";}
-                 else {
-                document.getElementById('ch4').style.border= "6px outset red";
-                document.getElementById('ch4').style.boxShadow = "0px 8px 16px rgba(255, 8, 8, 0.881)";}
+        
             
-
-
-
-                if (e=="Asia") {n++;
-                    document.getElementById('ch5').style.border= "6px outset lime";
-                    document.getElementById('ch5').style.boxShadow = "0px 8px 16px rgb(33, 252, 91)";}
-                     else {
-                    document.getElementById('ch5').style.border= "6px outset red";
-                    document.getElementById('ch5').style.boxShadow = "0px 8px 16px rgba(255, 8, 8, 0.881)";}
-                
-
-                    if (f=="Australia") {n++;
-                        document.getElementById('ch6').style.border= "6px outset lime";
-                        document.getElementById('ch6').style.boxShadow = "0px 8px 16px rgb(33, 252, 91)";}
-                         else {
-                        document.getElementById('ch6').style.border= "6px outset red";
-                        document.getElementById('ch6').style.boxShadow = "0px 8px 16px rgba(255, 8, 8, 0.881)";}
-                    
-
-                        if (g=="Intrctica") {n++;
-                            document.getElementById('ch7').style.border= "6px outset lime";
-                            document.getElementById('ch7').style.boxShadow = "0px 8px 16px rgb(33, 252, 91)";}
-                             else {
-                            document.getElementById('ch7').style.border= "6px outset red";
-                            document.getElementById('ch7').style.boxShadow = "0px 8px 16px rgba(255, 8, 8, 0.881)";}
-                        
-
         
-
-
-                            if (n == 7) {
-                                alert("Excellent :) Votre résultat est " + n + "/7");
-                            } else if (n < 7 && n >= 5) {
-                                alert("Très proche. Votre résultat est " + n + "/7");
-                            } else if (n < 5 && n >= 3) {
-                                alert("Pas mal. Votre résultat est " + n + "/7");
-                            } else if (n < 3 && n > 1) {
-                                alert("Vous êtes nul en géographie. Votre résultat est " + n + "/7");
-                            } else {
-                                alert("reellment ?. Votre résultat est " + n + "/7");
-                            }
-                            
-
-
-
-
-
-
-
-    }
     
+    });}
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const VID = "nul"; 
+    const CORRECT_ANSWERS = {
+        ch1: "North America", 
+        ch2: "South America",
+        ch3: "Africa",
+        ch4: "Europe",
+        ch5: "Asia",
+        ch6: "Australia",
+        ch7: "Antrctica" 
+    };
+
+    
+    
+
+    function handleChange(selectElement) {
+        const selectedValue = selectElement.value;
+        const allSelects = document.querySelectorAll('.chouse');
+
+        allSelects.forEach(select => {
+            if (select !== selectElement && select.value === selectedValue) {
+                select.value = VID;
+            }
+        });
+
+        const audio = document.getElementById('sound');
+        if (audio) {
+            audio.currentTime = 0;
+            audio.play();
+        }
+    }
+
+    function showCorrection() {
+        Swal.fire({
+            title: 'Information',
+            text: 'Vous allez voir la correction.',
+            icon: 'info'
+        });
+    
+        // Modifier le fond et masquer certaines sections
+        document.body.style.backgroundImage = "url('world_map_name.png.jpg')";
+        document.querySelectorAll("#wel, #bet, #form, #title").forEach(el => el.style.display = 'none');
+        
+        // Afficher le bouton "Retour"
+        const retourButton = document.querySelector('button[type="button"]');
+        if (retourButton) {
+            retourButton.style.display = 'inline-block';  // Afficher le bouton retour
+            
+        }
+    }
+
+
+   
+
+    
+
+
+    function testAnswers() {
+        let score = 0;
+        Object.keys(CORRECT_ANSWERS).forEach(key => {
+            const field = document.getElementById(key);
+            if (field && field.value === CORRECT_ANSWERS[key]) {
+                score++;
+                field.style.border = "6px outset lime";
+                field.style.boxShadow = "0px 8px 16px rgb(33, 252, 91)";
+            } else if (field) {
+                field.style.border = "6px outset red";
+                field.style.boxShadow = "0px 8px 16px rgba(255, 8, 8, 0.881)";
+            }
+        });
+
+        let message = '';
+        let icon = '';
+        let imageUrl = '';
+        if (score === 7) {
+            message = 'Excellent :) Votre résultat est : ' + score + '/7';
+            icon = 'success';
+            imageUrl = 'pp.gif';
+        } else if (score >= 5) {
+            message = 'Très proche. Votre résultat est : ' + score + '/7';
+            icon = 'success';
+            imageUrl = 'https://emojiterra.com/data/animated-emoji/1f610.gif';
+        } else if (score >= 3) {
+            message = 'Pas mal. Votre résultat est : ' + score + '/7';
+            icon = 'success';
+            imageUrl = 'https://emojiterra.com/data/animated-emoji/1f610.gif';
+        } else if (score > 1) {
+            message = 'Votre résultat est : ' + score + '/7';
+            icon = 'success';
+        } else {
+            message = 'Votre résultat est : ' + score + '/7';
+            icon = 'error';
+        }
+
+        Swal.fire({
+            title: message,
+            icon: icon
+        });
+
+        const welElement = document.getElementById('wel');
+        if (welElement && imageUrl) {
+            welElement.src = imageUrl;
+        }
+    }
+
+    const chouseElements = document.querySelectorAll('.chouse');
+    chouseElements.forEach(selectElement => {
+        selectElement.addEventListener('change', function () {
+            handleChange(this);
+        });
+    });
+
+    const correctionButton = document.getElementById('corrige');
+    if (correctionButton) {
+        correctionButton.addEventListener('click', showCorrection);
+    }
+
+    const validateButton = document.getElementById('vali');
+    if (validateButton) {
+        validateButton.addEventListener('click', testAnswers);
+    }
+});

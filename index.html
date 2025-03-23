@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>world_game</title>
+    <link rel="icon" type="image/png" href="https://icon-library.com/images/gaming-icon/gaming-icon-2.jpg">
+
     <link rel="stylesheet" href="world_map.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+ 
+    
+
+
 </head>
 
 
 
 
 <body>
+    <button type="button" id="retour" style="display:none;"  onclick="goBack()">Retour</button>
+
       <div id="title"> world map game</div>
     
     <br>
@@ -22,20 +32,20 @@
     <form action="map.php" method="post" name="map">
 <ol class="nom">
     <li><select name="ch1" class="chouse" id="ch1" onchange="change1(this.value)">
-        <option id="v1" value="nul">...</option>
+        <option id="v1" value="nul" disabled selected>...</option>
         <option value="Europe">Europe</option>
-        <option value="Intrctica">Intrctica</option>
+        <option value="Antrctica">Antrctica</option>
         <option value="Asia">Asia</option>
-        <option value="North Ameria">North Ameria</option>
+        <option value="North America">North Ameria</option>
         <option value="South America">South America</option>
         <option value="Australia">Australia</option>
         <option value="Africa">Africa</option>
         </select></li>
 
         <li><select name="ch2" class="chouse" id="ch2" onchange="change2(this.value)">
-            <option value="nul">...</option>
+            <option value="nul" disabled selected>...</option>
             <option value="Europe">Europe</option>
-            <option value="Intrctica">Intrctica</option>
+            <option value="Antrctica">Antrctica</option>
             <option value="Asia">Asia</option>
             <option value="North Ameria">North Ameria</option>
             <option value="South America">South America</option>
@@ -44,9 +54,9 @@
             </select></li>
 
             <li><select name="ch3" class="chouse" id="ch3" onchange="change3(this.value)">
-                <option value="nul">...</option>
+                <option value="nul" disabled selected>...</option>
                 <option value="Europe">Europe</option>
-                <option value="Intrctica">Intrctica</option>
+                <option value="Antrctica">Antrctica</option>
                 <option value="Asia">Asia</option>
                 <option value="North Ameria">North Ameria</option>
                 <option value="South America">South America</option>
@@ -55,7 +65,7 @@
                 </select></li>
 
                 <li><select name="ch4" class="chouse" id="ch4" onchange="change4(this.value)">
-                    <option value="nul">...</option>
+                    <option value="nul" disabled selected>...</option>
                     <option value="Europe">Europe</option>
                     <option value="Intrctica">Intrctica</option>
                     <option value="Asia">Asia</option>
@@ -66,9 +76,9 @@
                     </select></li>
 
                     <li><select name="ch5" class="chouse" id="ch5" onchange="change5(this.value)">
-                        <option   value="nul">...</option>
+                        <option   value="nul" disabled selected>...</option>
                         <option value="Europe">Europe</option>
-                        <option value="Intrctica">Intrctica</option>
+                        <option value="Antrctica">Antrctica</option>
                         <option value="Asia">Asia</option>
                         <option value="North Ameria">North Ameria</option>
                         <option value="South America">South America</option>
@@ -77,9 +87,9 @@
                         </select></li>
 
                         <li><select name="ch6" class="chouse" id="ch6" onchange="change6(this.value)">
-                            <option value="nul">...</option>
+                            <option value="nul" disabled selected>...</option>
                             <option value="Europe">Europe</option>
-                            <option value="Intrctica">Intrctica</option>
+                            <option value="Antrctica">Antrctica</option>
                             <option value="Asia">Asia</option>
                             <option value="North Ameria">North Ameria</option>
                             <option value="South America">South America</option>
@@ -88,9 +98,9 @@
                             </select></li>
 
                             <li><select name="ch7" class="chouse" id="ch7" onchange="change7(this.value)">
-                                <option value="nul">...</option>
+                                <option value="nul" disabled selected>...</option>
                                 <option value="Europe">Europe</option>
-                                <option value="Intrctica">Intrctica</option>
+                                <option value="Antrctica">Antrctica</option>
                                 <option value="Asia">Asia</option>
                                 <option value="North Ameria">North Ameria</option>
                                 <option value="South America">South America</option>
@@ -99,29 +109,23 @@
                                 </select></li> 
 </ol>
 <div id="but">
-<button type="reset" class="fin" id="annu">Annuler</button>
+<button type="reset" class="fin" id="annu" onclick="onAnnu()">Annuler</button>
 <button type="button" class="fin" id="vali" onclick="teste()">valider</button>
 
 </div>
-
 
 </form>
 </div>
 
 <div id="sma"> 
-<button id="corrige" onclick="correction()">corrige</button>
+
+<button id="corrige" onclick="showCorrection()">corrige</button>
+
 <img id="wel" src="smail.gif" alt="image-animé">
-
 </div>
 </div>
-
-
-
-
-
 <audio id="sound" src="soobschenie_vkontakte meloboom.mp3"></audio>
-
-
 <script src="world_map.js"></script>
+
 </body>
 </html>
